@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+
+/* to run the file without extention
+Command :
+>$ g++ -x c++ abc
+-x <language>
+*/
+
+int main()
+{
+    cout << "hello world with file without extention\n";
+    return 0;
+}
