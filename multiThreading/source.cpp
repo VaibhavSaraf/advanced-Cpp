@@ -32,6 +32,11 @@ void evenSums(ull start, ull end)
     }
 }
 
+/* how to run multithreaded program
+g++ -std=c++11 source.cpp -pthread
+
+*/
+
 int main()
 {
     ull start = 0;
@@ -52,7 +57,7 @@ int main()
     cout << "odd sum: " << oddSum << endl;
     cout << "even sum: " << evenSum << endl;
 
-    cout << duration.count() / 1000000.0 << endl;
+    cout << duration.count() << endl;
 
     return 0;
 }
