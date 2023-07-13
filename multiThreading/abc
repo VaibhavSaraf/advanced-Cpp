@@ -3,7 +3,9 @@ using namespace std;
 
 /* to run the file without extention
 Command :
+
 >$ g++ -x c++ abc
+
 -x <language>
 */
 
