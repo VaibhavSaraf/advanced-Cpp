@@ -9,6 +9,7 @@ std::mutex m;
 
 void addMoney()
 {
+    /*this is blocking call*/
     m.lock();
     amount++;
     m.unlock();
