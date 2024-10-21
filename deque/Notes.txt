@@ -1,0 +1,52 @@
+deque is similar to a vector but limited in insertion/removal to front and back.
+
+Fixed size arrays
+
+If we want to store large objects the deque is a better choice than vectors because deque doesn't require contiguous memory, it can avoid costly memory reallocation and copying during resizing, leading to better performance and reduced overhead compared to vector.
+
+Data Structure: The map stores pointers to dynamically allocated Blocks, each of which is a vector that holds up to BLOCK_SIZE elements. This forms the "segmented" storage of deque.
+Element Access: The helper functions block_index() and within_block_index() determine which block and which index within the block an element resides at.
+push_front/pop_front and push_back/pop_back: These methods handle resizing when necessary. Expanding the front adds a new block at the beginning, while expanding the back adds a new block at the end.
+Iterators: Basic iterators using pointers are provided for simplicity.
+insert and erase: For simplicity, the insert and erase methods here perform naive operations by shifting elements around.
+This implementation is not highly optimized but provides a basic structure for a deque using a segmented array-based approach. It can be further improved for performance, memory efficiency, and iterator support.
+
+/*
+Write implemenation of std::deque with following operations
+erase
+resize
+pop_front, pop_back
+constructor
+operator=
+at
+operator[]
+front
+back
+begin
+cbegin
+end
+cend
+rbegin
+crbegin
+rend
+crend
+Capacity
+empty
+size
+max_size
+clear
+insert
+emplace
+erase
+push_back
+emplace_back
+pop_back
+push_front
+emplace_front
+pop_front
+resize
+swap
+
+plus add implementations that use a sequence of individually allocated fixed -size arrays with additional bookkeepings
+which means indexed access to deque mus perform two pointer dereferences compared.
+*/
